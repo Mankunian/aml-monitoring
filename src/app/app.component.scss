@@ -96,10 +96,6 @@
 
 .main-content {
   flex: 1;
-  padding: 3rem;
-  transition: margin-left 0.3s ease;
-
-  &.shifted {
-    margin-left: 250px;
-  }
+  padding: 3em 1em;
+  overflow-y: auto;
 }
