@@ -13,19 +13,33 @@
   .slider-wrapper {
     width: 100%;
     margin: 2rem 0;
+
+    .slider-label {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .slider-value {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
   }
 
-  .slider-label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
+  .alert-container {
+    .stat_link {
+      display: inline-block;
+      font-size: 1.2rem; /* больше размер */
+      color: #007bff; /* синий как у ссылок */
+      text-decoration: underline;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .stat_link:hover {
+      color: #0056b3; /* темнее при наведении */
+    }
+
   }
-
-  .slider-value {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #555;
-  }
-
-
 }

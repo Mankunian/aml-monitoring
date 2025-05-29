@@ -44,9 +44,17 @@
     <div class="slider-value">Текущее значение: {{ sliderValue }}</div>
   </div>
 
-<!--  <div class="start-analyse">-->
-<!--    <p-button (click)="onUpload($event)" label="Начать анализ" [outlined]="true" severity="contrast" />-->
-<!--  </div>-->
+
+  <div *ngIf="fileResult" class="alert-container">
+    <p-messages [(value)]="messageInfo" [closable]="false" />
+
+    <p>Анализ завершен. Проанализировано {{ fileResult.total_results }} транзакций.</p>
+
+    <p-messages [(value)]="messageSuccess" [closable]="false" />
+
+    <a class="stat_link">Перейти к статистике</a>
+
+  </div>
 
 
 

@@ -1,0 +1,2582 @@
+{
+  "summary": {
+    "total_processed": 1000,
+    "risk_distribution": {
+      "high_risk": {
+        "count": 199,
+        "percentage": 19.9
+      },
+      "medium_risk": {
+        "count": 801,
+        "percentage": 80.1
+      },
+      "low_risk": {
+        "count": 0,
+        "percentage": 0
+      }
+    },
+    "top_triggered_rules": [
+      {
+        "rule": "threshold_exceeded",
+        "count": 1000,
+        "description": "Превышение пороговой суммы"
+      },
+      {
+        "rule": "high_risk_jurisdiction",
+        "count": 440,
+        "description": "Операция с высокорисковой юрисдикцией"
+      },
+      {
+        "rule": "unusual_transaction_type",
+        "count": 249,
+        "description": "Необычный тип транзакции"
+      },
+      {
+        "rule": "high_risk_client",
+        "count": 124,
+        "description": "Клиент с высоким риском"
+      },
+      {
+        "rule": "suspicious_activity",
+        "count": 89,
+        "description": "Подозрительная активность"
+      }
+    ],
+    "recommendations": [
+      "Высокий процент транзакций с высоким риском. Рекомендуется детальная проверка.",
+      "Много транзакций превышают пороговые суммы. Проверьте источники средств."
+    ],
+    "processing_errors": 0
+  },
+  "statistics": {
+    "total_transactions": 1000,
+    "processed_transactions": 1000,
+    "high_risk_count": 199,
+    "medium_risk_count": 801,
+    "low_risk_count": 0,
+    "error_count": 0,
+    "rule_statistics": {
+      "threshold_exceeded": 1000,
+      "high_risk_jurisdiction": 440,
+      "high_risk_client": 124,
+      "unusual_transaction_type": 249,
+      "suspicious_activity": 89,
+      "structured_transactions": 2
+    },
+    "processing_time": "2025-05-29T17:25:57.212016",
+    "settings_applied": {
+      "max_transactions": 1000,
+      "risk_threshold": 1,
+      "include_low_risk": false
+    }
+  },
+  "results": [
+    {
+      "transaction_id": 23,
+      "risk_level": "Высокий",
+      "risk_score": 5,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000042 (40409148431)",
+        "receiver_info": "Клиент P000047 (65110161332)",
+        "amount": "21 566 257.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-22 18:24:06",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 22
+    },
+    {
+      "transaction_id": 182,
+      "risk_level": "Высокий",
+      "risk_score": 5,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000042 (40409148431)",
+        "receiver_info": "Клиент P000047 (65110161332)",
+        "amount": "21 834 258.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-08 23:25:30",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 181
+    },
+    {
+      "transaction_id": 366,
+      "risk_level": "Высокий",
+      "risk_score": 5,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000032 (24603121173)",
+        "receiver_info": "Компания C000025 (1030638973)",
+        "amount": "966 340.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-05 23:21:51",
+        "description": "Перевод средств по договору №484/61"
+      },
+      "original_index": 365
+    },
+    {
+      "transaction_id": 476,
+      "risk_level": "Высокий",
+      "risk_score": 5,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000032 (24603121173)",
+        "receiver_info": "Компания C000025 (1030638973)",
+        "amount": "991 010.00",
+        "currency": "USD",
+        "transaction_date": "2025-01-29 17:34:52",
+        "description": "Перевод по договору №863/7 от 07.04.2025"
+      },
+      "original_index": 475
+    },
+    {
+      "transaction_id": 662,
+      "risk_level": "Высокий",
+      "risk_score": 5,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000025 (21305092795)",
+        "receiver_info": "Компания C000019 (8720739630)",
+        "amount": "902 754.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-17 09:02:43",
+        "description": "Перевод средств по договору №23/20"
+      },
+      "original_index": 661
+    },
+    {
+      "transaction_id": 670,
+      "risk_level": "Высокий",
+      "risk_score": 5,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000029 (17006135124)",
+        "receiver_info": "Компания C000006 (2411270813)",
+        "amount": "930 607.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-08 06:11:43",
+        "description": "Перевод по договору №422/51 от 21.05.2024"
+      },
+      "original_index": 669
+    },
+    {
+      "transaction_id": 865,
+      "risk_level": "Высокий",
+      "risk_score": 5,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000029 (17006135124)",
+        "receiver_info": "Компания C000006 (2411270813)",
+        "amount": "943 828.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-26 23:24:46",
+        "description": "Перевод по договору №365/35 от 19.06.2024"
+      },
+      "original_index": 864
+    },
+    {
+      "transaction_id": 913,
+      "risk_level": "Высокий",
+      "risk_score": 5,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000032 (24603121173)",
+        "receiver_info": "Компания C000025 (1030638973)",
+        "amount": "961 515.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-16 19:47:13",
+        "description": "Перевод по договору №469/46 от 24.04.2025"
+      },
+      "original_index": 912
+    },
+    {
+      "transaction_id": 991,
+      "risk_level": "Высокий",
+      "risk_score": 5,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000029 (17006135124)",
+        "receiver_info": "Клиент P000039 (39612241558)",
+        "amount": "970 597.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-21 04:12:57",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 990
+    },
+    {
+      "transaction_id": 997,
+      "risk_level": "Высокий",
+      "risk_score": 5,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000032 (24603121173)",
+        "receiver_info": "Компания C000011 (2190551373)",
+        "amount": "936 378.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-15 05:38:46",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 996
+    },
+    {
+      "transaction_id": 55,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000032 (24603121173)",
+        "receiver_info": "Компания C000040 (9161099467)",
+        "amount": "924 000.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-01 23:25:37",
+        "description": "Перечисление денежных средств по договору №376/28 от 16.07.2024"
+      },
+      "original_index": 54
+    },
+    {
+      "transaction_id": 69,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000045 (9090994405)",
+        "receiver_info": "Компания C000032 (5540325712)",
+        "amount": "519 758.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-12 20:59:56",
+        "description": "Перевод средств по договору №686/33"
+      },
+      "original_index": 68
+    },
+    {
+      "transaction_id": 77,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000029 (17006135124)",
+        "receiver_info": "Клиент P000039 (39612241558)",
+        "amount": "906 885.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-09 13:24:52",
+        "description": "Платеж за товары и услуги по договору №815/70 от 29.11.2024"
+      },
+      "original_index": 76
+    },
+    {
+      "transaction_id": 89,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000035 (24612225098)",
+        "receiver_info": "Клиент P000034 (21907173302)",
+        "amount": "314 271.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-03 16:09:24",
+        "description": "Инвестиции в проект №545/95"
+      },
+      "original_index": 88
+    },
+    {
+      "transaction_id": 142,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000027 (1860698277)",
+        "receiver_info": "Клиент P000045 (41109194386)",
+        "amount": "41 120.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-01 13:26:24",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 141
+    },
+    {
+      "transaction_id": 173,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000026 (24008066950)",
+        "receiver_info": "Компания C000028 (7690114137)",
+        "amount": "660 292.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-10 18:33:44",
+        "description": "Перевод по договору №271/3 от 10.02.2025"
+      },
+      "original_index": 172
+    },
+    {
+      "transaction_id": 174,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000048 (2950276193)",
+        "receiver_info": "Клиент P000049 (36711176069)",
+        "amount": "949 511.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-15 02:23:02",
+        "description": "Перевод средств по договору №42/89"
+      },
+      "original_index": 173
+    },
+    {
+      "transaction_id": 178,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000024 (6550875949)",
+        "receiver_info": "Клиент P000001 (60506121141)",
+        "amount": "1 377 672.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-03 13:11:51",
+        "description": "Платеж за товары и услуги по договору №597/88 от 20.04.2025"
+      },
+      "original_index": 177
+    },
+    {
+      "transaction_id": 207,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000015 (5970744395)",
+        "receiver_info": "Компания C000040 (9161099467)",
+        "amount": "984 423.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-13 19:22:37",
+        "description": "Инвестиционный взнос по договору №267/37 от 26.03.2025"
+      },
+      "original_index": 206
+    },
+    {
+      "transaction_id": 219,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000025 (21305092795)",
+        "receiver_info": "Клиент P000036 (56604252061)",
+        "amount": "962 007.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-09 05:22:03",
+        "description": "Инвестиционный взнос по договору №741/55 от 07.12.2024"
+      },
+      "original_index": 218
+    },
+    {
+      "transaction_id": 263,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000048 (2950276193)",
+        "receiver_info": "Клиент P000048 (83409144236)",
+        "amount": "973 588.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-03 01:29:51",
+        "description": "Оплата маркетинговых услуг"
+      },
+      "original_index": 262
+    },
+    {
+      "transaction_id": 273,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000048 (2950276193)",
+        "receiver_info": "Клиент P000049 (36711176069)",
+        "amount": "916 354.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-11 06:39:30",
+        "description": "Перечисление по соглашению от 20.11.2024"
+      },
+      "original_index": 272
+    },
+    {
+      "transaction_id": 276,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000012 (7531269174)",
+        "receiver_info": "Клиент P000034 (21907173302)",
+        "amount": "36 676.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-17 15:46:33",
+        "description": "Оплата по счету №667/25 от 16.04.2025"
+      },
+      "original_index": 275
+    },
+    {
+      "transaction_id": 277,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000048 (2950276193)",
+        "receiver_info": "Клиент P000033 (13508285031)",
+        "amount": "941 205.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-04 08:23:06",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 276
+    },
+    {
+      "transaction_id": 320,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000010 (78009201931)",
+        "receiver_info": "Компания C000004 (4091270302)",
+        "amount": "906 565.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-06 17:46:20",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 319
+    },
+    {
+      "transaction_id": 392,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000015 (5970744395)",
+        "receiver_info": "Компания C000013 (1730863650)",
+        "amount": "942 414.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-02 19:29:39",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 391
+    },
+    {
+      "transaction_id": 426,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000039 (9830588443)",
+        "receiver_info": "Компания C000001 (9550215349)",
+        "amount": "971 149.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-19 00:21:16",
+        "description": "Перевод средств по договору №802/34"
+      },
+      "original_index": 425
+    },
+    {
+      "transaction_id": 463,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000040 (24308242638)",
+        "receiver_info": "Клиент P000042 (40409148431)",
+        "amount": "830 539.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-15 21:30:47",
+        "description": "Перевод по договору №686/91 от 17.11.2024"
+      },
+      "original_index": 462
+    },
+    {
+      "transaction_id": 482,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000011 (86705112646)",
+        "receiver_info": "Компания C000050 (5610550738)",
+        "amount": "10 389 606.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-12 04:09:59",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 481
+    },
+    {
+      "transaction_id": 501,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000042 (40409148431)",
+        "receiver_info": "Клиент P000032 (24603121173)",
+        "amount": "47 883 880.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-21 10:58:00",
+        "description": "Перевод средств по договору №499/55"
+      },
+      "original_index": 500
+    },
+    {
+      "transaction_id": 504,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000040 (24308242638)",
+        "receiver_info": "Клиент P000042 (40409148431)",
+        "amount": "785 957.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-09 05:16:06",
+        "description": "Перевод по договору №804/64 от 13.04.2025"
+      },
+      "original_index": 503
+    },
+    {
+      "transaction_id": 562,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000001 (60506121141)",
+        "receiver_info": "Компания C000026 (4280676953)",
+        "amount": "42 135 807.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-12 22:46:44",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 561
+    },
+    {
+      "transaction_id": 646,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000012 (7531269174)",
+        "receiver_info": "Клиент P000001 (60506121141)",
+        "amount": "57 492.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-09 15:21:53",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 645
+    },
+    {
+      "transaction_id": 705,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000042 (40409148431)",
+        "receiver_info": "Клиент P000047 (65110161332)",
+        "amount": "24 535 978.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-01 10:38:29",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 704
+    },
+    {
+      "transaction_id": 723,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000013 (1730863650)",
+        "receiver_info": "Клиент P000008 (77104248581)",
+        "amount": "941 168.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-04 13:38:22",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 722
+    },
+    {
+      "transaction_id": 727,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000045 (41109194386)",
+        "receiver_info": "Клиент P000039 (39612241558)",
+        "amount": "979 213.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-19 16:58:16",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 726
+    },
+    {
+      "transaction_id": 772,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000040 (24308242638)",
+        "receiver_info": "Клиент P000042 (40409148431)",
+        "amount": "614 453.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-10 22:55:42",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 771
+    },
+    {
+      "transaction_id": 794,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000029 (17006135124)",
+        "receiver_info": "Компания C000024 (6550875949)",
+        "amount": "906 485.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-09 10:02:54",
+        "description": "Перевод по договору №107/36 от 02.11.2024"
+      },
+      "original_index": 793
+    },
+    {
+      "transaction_id": 810,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000040 (24308242638)",
+        "receiver_info": "Клиент P000042 (40409148431)",
+        "amount": "864 966.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-14 14:11:56",
+        "description": "Оплата маркетинговых услуг"
+      },
+      "original_index": 809
+    },
+    {
+      "transaction_id": 823,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000010 (5600790108)",
+        "receiver_info": "Клиент P000038 (58405037003)",
+        "amount": "26 649 557.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-01 12:06:56",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 822
+    },
+    {
+      "transaction_id": 862,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000036 (4121057170)",
+        "receiver_info": "Клиент P000037 (23302252232)",
+        "amount": "48 064 953.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-06 18:59:39",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 861
+    },
+    {
+      "transaction_id": 909,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000048 (2950276193)",
+        "receiver_info": "Клиент P000049 (36711176069)",
+        "amount": "958 441.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-03 04:41:27",
+        "description": "Перечисление по соглашению от 18.05.2024"
+      },
+      "original_index": 908
+    },
+    {
+      "transaction_id": 978,
+      "risk_level": "Высокий",
+      "risk_score": 4,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "structured_transactions",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Признаки дробления операции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000001 (60506121141)",
+        "receiver_info": "Клиент P000027 (45311246951)",
+        "amount": "9 904 530.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-06 08:16:16",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 977
+    },
+    {
+      "transaction_id": 15,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000003 (19202122857)",
+        "receiver_info": "Клиент P000007 (60412145081)",
+        "amount": "40 063.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-13 10:30:29",
+        "description": "Перечисление средств для инвестирования по договору №797/94 от 29.01.2025"
+      },
+      "original_index": 14
+    },
+    {
+      "transaction_id": 18,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000034 (21907173302)",
+        "receiver_info": "Компания C000015 (5970744395)",
+        "amount": "41 960 199.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-12 09:56:43",
+        "description": "Инвестиции в проект №514/39"
+      },
+      "original_index": 17
+    },
+    {
+      "transaction_id": 24,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000048 (2950276193)",
+        "receiver_info": "Клиент P000049 (36711176069)",
+        "amount": "903 169.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-21 20:25:01",
+        "description": "Оплата маркетинговых услуг"
+      },
+      "original_index": 23
+    },
+    {
+      "transaction_id": 29,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000015 (5970744395)",
+        "receiver_info": "Компания C000013 (1730863650)",
+        "amount": "952 402.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-08 11:01:15",
+        "description": "Перевод по договору №34/47 от 21.09.2024"
+      },
+      "original_index": 28
+    },
+    {
+      "transaction_id": 31,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000020 (4330111639)",
+        "receiver_info": "Компания C000014 (4050530048)",
+        "amount": "41 391.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-29 08:52:23",
+        "description": "Перевод средств по договору №155/8"
+      },
+      "original_index": 30
+    },
+    {
+      "transaction_id": 34,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000030 (90208264072)",
+        "receiver_info": "Компания C000035 (5781249288)",
+        "amount": "2 905 139.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-04 12:00:53",
+        "description": "Перечисление средств для инвестирования по договору №111/55 от 06.06.2024"
+      },
+      "original_index": 33
+    },
+    {
+      "transaction_id": 35,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000036 (4121057170)",
+        "receiver_info": "Компания C000022 (2700941016)",
+        "amount": "29 724 308.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-18 11:38:54",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 34
+    },
+    {
+      "transaction_id": 39,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000033 (8940171493)",
+        "receiver_info": "Компания C000041 (9100530480)",
+        "amount": "17 227 137.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-27 11:31:38",
+        "description": "Перевод по договору №931/84 от 20.02.2025"
+      },
+      "original_index": 38
+    },
+    {
+      "transaction_id": 64,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000010 (5600790108)",
+        "receiver_info": "Клиент P000038 (58405037003)",
+        "amount": "32 728 762.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-07 22:42:37",
+        "description": "Перечисление по соглашению от 28.05.2024"
+      },
+      "original_index": 63
+    },
+    {
+      "transaction_id": 87,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000020 (64307032883)",
+        "receiver_info": "Компания C000006 (2411270813)",
+        "amount": "53 180.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-18 13:05:45",
+        "description": "Перевод средств по договору №57/56"
+      },
+      "original_index": 86
+    },
+    {
+      "transaction_id": 93,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000045 (41109194386)",
+        "receiver_info": "Клиент P000014 (76209245031)",
+        "amount": "925 419.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-30 18:19:30",
+        "description": "Перевод средств по договору №636/65"
+      },
+      "original_index": 92
+    },
+    {
+      "transaction_id": 95,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000001 (60506121141)",
+        "receiver_info": "Клиент P000027 (45311246951)",
+        "amount": "6 603 902.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-27 03:37:36",
+        "description": "Перечисление суммы займа по договору №111/5 от 19.05.2024"
+      },
+      "original_index": 94
+    },
+    {
+      "transaction_id": 103,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000026 (24008066950)",
+        "receiver_info": "Клиент P000007 (60412145081)",
+        "amount": "75 533.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-21 22:09:19",
+        "description": "Оплата по счету №467/53 от 16.05.2024"
+      },
+      "original_index": 102
+    },
+    {
+      "transaction_id": 105,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000017 (40005135255)",
+        "receiver_info": "Клиент P000025 (21305092795)",
+        "amount": "357 577.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-16 03:22:00",
+        "description": "Оплата по счету №261/40 от 07.11.2024"
+      },
+      "original_index": 104
+    },
+    {
+      "transaction_id": 107,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000007 (60412145081)",
+        "receiver_info": "Клиент P000040 (24308242638)",
+        "amount": "20 689 298.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-19 09:08:29",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 106
+    },
+    {
+      "transaction_id": 110,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000039 (9830588443)",
+        "receiver_info": "Компания C000018 (9180228070)",
+        "amount": "950 424.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-01 09:15:06",
+        "description": "Перевод средств по договору №786/32"
+      },
+      "original_index": 109
+    },
+    {
+      "transaction_id": 116,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000001 (60506121141)",
+        "receiver_info": "Компания C000020 (4330111639)",
+        "amount": "37 005 735.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-28 10:12:03",
+        "description": "Оплата маркетинговых услуг"
+      },
+      "original_index": 115
+    },
+    {
+      "transaction_id": 119,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000042 (40409148431)",
+        "receiver_info": "Клиент P000043 (37212044656)",
+        "amount": "29 685.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-06 03:17:30",
+        "description": "Перечисление суммы займа по договору №338/43 от 15.05.2024"
+      },
+      "original_index": 118
+    },
+    {
+      "transaction_id": 134,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000030 (3440962509)",
+        "receiver_info": "Клиент P000016 (90903273826)",
+        "amount": "4 667 067.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-02 20:46:12",
+        "description": "Перевод по договору №535/28 от 11.02.2025"
+      },
+      "original_index": 133
+    },
+    {
+      "transaction_id": 155,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000047 (65110161332)",
+        "receiver_info": "Клиент P000038 (58405037003)",
+        "amount": "3 328 198.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-06 01:52:19",
+        "description": "Перевод по договору №651/96 от 05.12.2024"
+      },
+      "original_index": 154
+    },
+    {
+      "transaction_id": 160,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000002 (50705187417)",
+        "receiver_info": "Клиент P000032 (24603121173)",
+        "amount": "13 416.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-05 04:03:38",
+        "description": "Перечисление по соглашению от 05.01.2025"
+      },
+      "original_index": 159
+    },
+    {
+      "transaction_id": 163,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000043 (37212044656)",
+        "receiver_info": "Компания C000015 (5970744395)",
+        "amount": "184 500.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-10 02:56:54",
+        "description": "Оплата консультационных услуг"
+      },
+      "original_index": 162
+    },
+    {
+      "transaction_id": 168,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000027 (1860698277)",
+        "receiver_info": "Клиент P000049 (36711176069)",
+        "amount": "2 670 967.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-06 05:41:21",
+        "description": "Перевод по договору №287/58 от 01.07.2024"
+      },
+      "original_index": 167
+    },
+    {
+      "transaction_id": 179,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000015 (5970744395)",
+        "receiver_info": "Клиент P000003 (19202122857)",
+        "amount": "943 817.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-20 08:59:41",
+        "description": "Перечисление по соглашению от 09.10.2024"
+      },
+      "original_index": 178
+    },
+    {
+      "transaction_id": 185,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000015 (42312095020)",
+        "receiver_info": "Компания C000004 (4091270302)",
+        "amount": "775 698.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-10 21:12:50",
+        "description": "Перевод по договору №676/64 от 21.02.2025"
+      },
+      "original_index": 184
+    },
+    {
+      "transaction_id": 186,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000027 (1860698277)",
+        "receiver_info": "Компания C000036 (4121057170)",
+        "amount": "1 959 643.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-07 05:46:57",
+        "description": "Перевод средств по договору №300/82"
+      },
+      "original_index": 185
+    },
+    {
+      "transaction_id": 187,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000010 (78009201931)",
+        "receiver_info": "Клиент P000023 (31408162896)",
+        "amount": "943 135.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-03 11:05:10",
+        "description": "Заем согласно договору №454/46 от 19.11.2024"
+      },
+      "original_index": 186
+    },
+    {
+      "transaction_id": 191,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000014 (76209245031)",
+        "receiver_info": "Клиент P000021 (64010037884)",
+        "amount": "1 621 456.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-16 06:51:17",
+        "description": "Предоставление займа по договору №850/3 от 17.08.2024"
+      },
+      "original_index": 190
+    },
+    {
+      "transaction_id": 199,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000001 (9550215349)",
+        "receiver_info": "Клиент P000042 (40409148431)",
+        "amount": "21 303.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-30 22:12:15",
+        "description": "Заем согласно договору №139/1 от 22.03.2025"
+      },
+      "original_index": 198
+    },
+    {
+      "transaction_id": 200,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "suspicious_activity"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Подозрительная активность"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000001 (60506121141)",
+        "receiver_info": "Компания C000048 (2950276193)",
+        "amount": "44 360 592.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-19 05:37:44",
+        "description": "Оплата по счету №112/29 от 05.01.2025"
+      },
+      "original_index": 199
+    },
+    {
+      "transaction_id": 204,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000014 (4050530048)",
+        "receiver_info": "Клиент P000030 (90208264072)",
+        "amount": "48 064 733.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-18 22:33:53",
+        "description": "Оплата за товары согласно договору №613/24 от 20.07.2024"
+      },
+      "original_index": 203
+    },
+    {
+      "transaction_id": 206,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000021 (64010037884)",
+        "receiver_info": "Клиент P000025 (21305092795)",
+        "amount": "6 940 175.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-16 01:30:00",
+        "description": "Перечисление средств на благотворительность"
+      },
+      "original_index": 205
+    },
+    {
+      "transaction_id": 212,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000034 (21907173302)",
+        "receiver_info": "Клиент P000046 (83801092433)",
+        "amount": "10 601 320.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-22 16:11:19",
+        "description": "Перевод по договору №69/51 от 09.01.2025"
+      },
+      "original_index": 211
+    },
+    {
+      "transaction_id": 215,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000024 (31709048748)",
+        "receiver_info": "Компания C000028 (7690114137)",
+        "amount": "310 064.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-11 20:44:57",
+        "description": "Перечисление средств для инвестирования по договору №383/38 от 07.10.2024"
+      },
+      "original_index": 214
+    },
+    {
+      "transaction_id": 232,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000014 (76209245031)",
+        "receiver_info": "Клиент P000035 (24612225098)",
+        "amount": "4 616 896.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-07 04:03:01",
+        "description": "Перевод по договору №210/19 от 22.06.2024"
+      },
+      "original_index": 231
+    },
+    {
+      "transaction_id": 242,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000030 (3440962509)",
+        "receiver_info": "Компания C000043 (5450984620)",
+        "amount": "1 956 178.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-07 16:02:46",
+        "description": "Перевод по договору №77/57 от 26.12.2024"
+      },
+      "original_index": 241
+    },
+    {
+      "transaction_id": 245,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000009 (2630395238)",
+        "receiver_info": "Компания C000045 (9090994405)",
+        "amount": "96 662.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-17 09:08:45",
+        "description": "Перевод по договору №89/5 от 14.05.2024"
+      },
+      "original_index": 244
+    },
+    {
+      "transaction_id": 251,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000032 (24603121173)",
+        "receiver_info": "Компания C000025 (1030638973)",
+        "amount": "948 464.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-27 07:48:52",
+        "description": "Перечисление по соглашению от 18.11.2024"
+      },
+      "original_index": 250
+    },
+    {
+      "transaction_id": 259,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000030 (3440962509)",
+        "receiver_info": "Клиент P000042 (40409148431)",
+        "amount": "3 421 502.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-28 21:13:06",
+        "description": "Оплата информационных услуг"
+      },
+      "original_index": 258
+    },
+    {
+      "transaction_id": 262,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "unusual_transaction_type",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Необычный тип транзакции",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000018 (76405257918)",
+        "receiver_info": "Компания C000046 (3350989808)",
+        "amount": "2 461 171.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-14 15:04:25",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 261
+    },
+    {
+      "transaction_id": 272,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000025 (21305092795)",
+        "receiver_info": "Клиент P000046 (83801092433)",
+        "amount": "915 279.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-25 06:43:48",
+        "description": "Перечисление средств для инвестирования по договору №516/50 от 07.12.2024"
+      },
+      "original_index": 271
+    },
+    {
+      "transaction_id": 283,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000042 (40409148431)",
+        "receiver_info": "Клиент P000047 (65110161332)",
+        "amount": "48 251 973.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-02 10:17:24",
+        "description": "Оплата консультационных услуг"
+      },
+      "original_index": 282
+    },
+    {
+      "transaction_id": 298,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000044 (28704186565)",
+        "receiver_info": "Компания C000010 (5600790108)",
+        "amount": "84 672.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-06 01:45:24",
+        "description": "Перечисление средств для инвестирования по договору №313/76 от 30.11.2024"
+      },
+      "original_index": 297
+    },
+    {
+      "transaction_id": 303,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000027 (45311246951)",
+        "receiver_info": "Компания C000004 (4091270302)",
+        "amount": "37 033.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-11 02:22:28",
+        "description": "Перевод по договору №792/44 от 04.06.2024"
+      },
+      "original_index": 302
+    },
+    {
+      "transaction_id": 307,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000022 (2700941016)",
+        "receiver_info": "Компания C000024 (6550875949)",
+        "amount": "90 085.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-15 09:36:34",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 306
+    },
+    {
+      "transaction_id": 309,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000025 (21305092795)",
+        "receiver_info": "Клиент P000036 (56604252061)",
+        "amount": "951 889.00",
+        "currency": "USD",
+        "transaction_date": "2025-01-29 16:22:25",
+        "description": "Предоставление займа по договору №444/27 от 09.09.2024"
+      },
+      "original_index": 308
+    },
+    {
+      "transaction_id": 312,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000015 (5970744395)",
+        "receiver_info": "Компания C000037 (4261159922)",
+        "amount": "970 479.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-03 16:36:07",
+        "description": "Оплата маркетинговых услуг"
+      },
+      "original_index": 311
+    },
+    {
+      "transaction_id": 321,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000039 (9830588443)",
+        "receiver_info": "Клиент P000035 (24612225098)",
+        "amount": "941 305.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-11 11:18:57",
+        "description": "Перечисление по соглашению от 06.06.2024"
+      },
+      "original_index": 320
+    },
+    {
+      "transaction_id": 327,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000010 (78009201931)",
+        "receiver_info": "Компания C000045 (9090994405)",
+        "amount": "924 617.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-21 22:11:51",
+        "description": "Заем согласно договору №836/79 от 24.09.2024"
+      },
+      "original_index": 326
+    },
+    {
+      "transaction_id": 330,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "suspicious_activity",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Подозрительная активность",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000010 (78009201931)",
+        "receiver_info": "Клиент P000023 (31408162896)",
+        "amount": "990 215.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-05 06:59:03",
+        "description": "Перечисление денежных средств по договору №252/51 от 10.06.2024"
+      },
+      "original_index": 329
+    },
+    {
+      "transaction_id": 351,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000001 (9550215349)",
+        "receiver_info": "Клиент P000042 (40409148431)",
+        "amount": "74 772.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-20 13:20:12",
+        "description": "Спонсорская помощь"
+      },
+      "original_index": 350
+    },
+    {
+      "transaction_id": 352,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000029 (6610891475)",
+        "receiver_info": "Клиент P000025 (21305092795)",
+        "amount": "1 170 900.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-17 09:42:16",
+        "description": "Перевод по договору №261/34 от 09.11.2024"
+      },
+      "original_index": 351
+    },
+    {
+      "transaction_id": 372,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "unusual_transaction_type"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Необычный тип транзакции"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000029 (6610891475)",
+        "receiver_info": "Клиент P000025 (21305092795)",
+        "amount": "3 227 696.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-09 15:33:29",
+        "description": "Инвестиционный взнос по договору №113/92 от 18.12.2024"
+      },
+      "original_index": 371
+    },
+    {
+      "transaction_id": 375,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000021 (64010037884)",
+        "receiver_info": "Клиент P000048 (83409144236)",
+        "amount": "28 480 550.00",
+        "currency": "USD",
+        "transaction_date": "2025-02-04 06:45:36",
+        "description": "Перевод согласно договоренности"
+      },
+      "original_index": 374
+    },
+    {
+      "transaction_id": 387,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000045 (9090994405)",
+        "receiver_info": "Компания C000025 (1030638973)",
+        "amount": "420 110.00",
+        "currency": "USD",
+        "transaction_date": "2025-04-17 21:37:52",
+        "description": "Перевод по договору №422/77 от 24.06.2024"
+      },
+      "original_index": 386
+    },
+    {
+      "transaction_id": 394,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Компания C000013 (1730863650)",
+        "receiver_info": "Клиент P000008 (77104248581)",
+        "amount": "933 472.00",
+        "currency": "USD",
+        "transaction_date": "2025-03-25 22:54:41",
+        "description": "Перевод средств по договору №756/65"
+      },
+      "original_index": 393
+    },
+    {
+      "transaction_id": 395,
+      "risk_level": "Высокий",
+      "risk_score": 3,
+      "triggered_rules": [
+        "threshold_exceeded",
+        "high_risk_jurisdiction",
+        "high_risk_client"
+      ],
+      "rule_descriptions": [
+        "Превышение пороговой суммы",
+        "Операция с высокорисковой юрисдикцией",
+        "Клиент с высоким риском"
+      ],
+      "analysis_details": {
+        "payer_info": "Клиент P000038 (58405037003)",
+        "receiver_info": "Компания C000050 (5610550738)",
+        "amount": "40 889.00",
+        "currency": "USD",
+        "transaction_date": "2025-05-03 16:37:35",
+        "description": "Перевод по договору №317/55 от 03.06.2024"
+      },
+      "original_index": 394
+    }
+  ],
+  "total_results": 1000
+}

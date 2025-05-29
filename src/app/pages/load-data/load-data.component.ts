@@ -4,6 +4,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {SliderModule} from "primeng/slider";
 import {FormsModule} from "@angular/forms";
 import {environment} from "../../../environments/environment";
+import {Message} from "primeng/api";
+import {FileResult, FileResultData} from "../../helper/interface";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-load-data',
@@ -12,7 +15,8 @@ import {environment} from "../../../environments/environment";
     FileUploadModule,
     HttpClientModule,
     SliderModule,
-    FormsModule
+    FormsModule,
+    NgIf
   ],
   templateUrl: './load-data.component.html',
   styleUrl: './load-data.component.scss'
@@ -21,6 +25,9 @@ export class LoadDataComponent {
   maxFileSize = 200 * 1024 * 1024; // 200 MB
   sliderValue = 0;
   apiUrl = environment.apiUrl;
+  messageInfo: Message[] = [];
+  messageSuccess: Message[] = [];
+  fileResult: FileResultData | null = null;
 
   onUpload(event: any) {
     const file: File = event.files[0];
@@ -33,7 +40,18 @@ export class LoadDataComponent {
 
     // Очистка компонента после загрузки (опционально)
     // (event.originalEvent.target as FileUpload)?.clear();
-    this.processFile(file);
+    this.processFile(file)
+      .then((result: FileResult) => {
+        // обработка результата
+        console.log('Файл обработан:', result);
+        this.fileResult = result.data;
+        this.messageInfo = [{ severity: 'info', detail: `Загружено ${result.data.total_results} сообщений для анализа...` }];
+        this.messageSuccess = [{ severity: 'success', detail: `Анализ завершен! Найдено ${result.data.results?.length} транзакций с рисками.` }];
+      })
+      .catch(error => {
+        // обработка ошибок
+        console.error('Ошибка обработки файла:', error);
+      });
   }
 
 
