@@ -1,13 +1,32 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Router, NavigationEnd, RouterOutlet} from '@angular/router';
+import {FormsModule} from "@angular/forms";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  imports: [
+    FormsModule,
+    RouterOutlet,
+    NgIf
+  ],
+  standalone: true
 })
 export class AppComponent {
-  title = 'aml-monitoring';
+  isOpen = true;
+  selectedRoute = 'load-data';
+
+  constructor(private router: Router) {
+  }
+
+  toggleSidebar() {
+    this.isOpen = !this.isOpen;
+  }
+
+  onRadioChange(route: string) {
+    this.router.navigate([route]);
+
+  }
 }

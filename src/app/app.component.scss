@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar {
+  background: rgb(240, 242, 246);
+  color: white;
+  width: 300px;
+  transition: width 0.3s ease;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+
+  &.closed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  nav {
+    margin-top: 3rem;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 1rem;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+
+  .sidebar-title, .sidebar-form label{
+    color: rgb(49, 51, 63);
+  }
+
+  .sidebar-title {
+    margin-top: 2em;
+  }
+
+  .sidebar-form {
+    display: grid;
+    line-height: 2;
+
+    h4 {
+      color: rgb(49, 51, 63);
+      margin-bottom: 0
+    }
+  }
+
+
+}
+
+/* Кнопка теперь фиксирована сбоку, всегда видна */
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  left: 0;  /* При закрытом sidebar — кнопка у левого края */
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  transition: left 0.3s ease;
+  margin-left: 1rem;
+}
+
+.toggle-btn:hover {
+  background-color: #555;
+}
+
+/* Сдвигаем кнопку вместе с sidebar */
+.sidebar.closed + .toggle-btn {
+  left: 0;
+}
+
+.sidebar:not(.closed) + .toggle-btn {
+  left: 300px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 3rem;
+  transition: margin-left 0.3s ease;
+
+  &.shifted {
+    margin-left: 250px;
+  }
+}
