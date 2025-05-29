@@ -1,3 +1,31 @@
 .main-content {
   //background: #133ad2;
+
+  :host ::ng-deep .p-fileupload {
+    width: 100%;
+  }
+
+  :host ::ng-deep .p-fileupload-content {
+    text-align: center;
+  }
+
+
+  .slider-wrapper {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .slider-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .slider-value {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+
 }

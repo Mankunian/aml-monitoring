@@ -1,3 +1,53 @@
 <div class="main-content">
-  <h2>📁 Загрузка данных</h2>
+
+
+  <div class="title">
+    <h1>📁 Загрузка данных</h1>
+    <span>Загрузите файл с транзакциями в формате JSON для анализа. Система проверит каждую транзакцию на соответствие правилам AML и выделит подозрительные операции.
+  </span>
+  </div>
+
+
+
+  <div class="file-upload-container">
+    <h4>Выберите файл JSON</h4>
+    <p-fileUpload
+      name="file"
+      mode="advanced"
+      chooseLabel="Выбрать"
+      uploadLabel="Начать анализ"
+      cancelLabel="Отменить"
+      dragDropSupport="true"
+      customUpload="true"
+      (uploadHandler)="onUpload($event)"
+      [maxFileSize]="maxFileSize"
+      [auto]="false"
+      [style]="{ width: '100%' }"
+    >
+      <ng-template pTemplate="content">
+        <p>Перетащите файл сюда или нажмите "Выбрать".</p>
+        <p class="text-sm text-gray-500">Максимум 200 МБ</p>
+      </ng-template>
+    </p-fileUpload>
+  </div>
+
+
+  <div class="slider-wrapper">
+    <label for="rating" class="slider-label">Оценка:</label>
+    <p-slider
+      id="rating"
+      [(ngModel)]="sliderValue"
+      [min]="1"
+      [max]="10"
+      [style]="{ width: '100%' }"
+    ></p-slider>
+    <div class="slider-value">Текущее значение: {{ sliderValue }}</div>
+  </div>
+
+<!--  <div class="start-analyse">-->
+<!--    <p-button (click)="onUpload($event)" label="Начать анализ" [outlined]="true" severity="contrast" />-->
+<!--  </div>-->
+
+
+
 </div>
