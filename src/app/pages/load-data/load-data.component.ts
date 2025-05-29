@@ -7,6 +7,7 @@ import {environment} from "../../../environments/environment";
 import {Message} from "primeng/api";
 import {FileResult, FileResultData} from "../../helper/interface";
 import {NgIf} from "@angular/common";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-load-data',
@@ -28,6 +29,9 @@ export class LoadDataComponent {
   messageInfo: Message[] = [];
   messageSuccess: Message[] = [];
   fileResult: FileResultData | null = null;
+
+  constructor(private router: Router) {
+  }
 
   onUpload(event: any) {
     const file: File = event.files[0];
@@ -53,7 +57,6 @@ export class LoadDataComponent {
         console.error('Ошибка обработки файла:', error);
       });
   }
-
 
   // Обработка файла
   processFile = async (file: File) => {
@@ -84,5 +87,12 @@ export class LoadDataComponent {
       reader.onerror = error => reject(error);
     });
   };
+
+  goStats() {
+    this.router.navigate(['/statistics'], {
+      state: { data: this.fileResult }
+    });
+
+  }
 
 }
