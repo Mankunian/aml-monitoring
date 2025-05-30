@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Router, NavigationEnd, RouterOutlet} from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {NgIf} from "@angular/common";
@@ -19,6 +19,27 @@ export class AppComponent {
   selectedRoute = 'load-data';
 
   constructor(private router: Router) {
+    // this.setRouteFromUrl();
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.setRouteFromUrl(); // переопредели selectedRoute
+      }
+    });
+  }
+
+  private setRouteFromUrl() {
+    const currentUrl = this.router.url;
+    console.log(currentUrl);
+    if (currentUrl.includes('load-data')) {
+      this.selectedRoute = 'load-data';
+    } else if (currentUrl.includes('statistics')) {
+      this.selectedRoute = 'statistics';
+    } else if (currentUrl.includes('detailed-analysis')) {
+      this.selectedRoute = 'detailed-analysis';
+    } else if (currentUrl.includes('settings')) {
+      this.selectedRoute = 'settings';
+    }
+    // Добавь другие условия при необходимости
   }
 
   toggleSidebar() {
