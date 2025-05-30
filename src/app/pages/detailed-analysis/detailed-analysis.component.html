@@ -71,7 +71,10 @@
       </div>
 
       <div class="actions">
-        <p-button (click)="submitFilter()" label="Submit" />
+        <p-button (click)="submitFilter()" label="Поиск" />
+
+        <p-button (click)="resetFilter()" label="Сбросить" [outlined]="true" severity="warning" />
+
       </div>
     </p-card>
   </div>

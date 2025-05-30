@@ -22,6 +22,7 @@ import {SliderModule} from "primeng/slider";
 })
 export class DetailedAnalysisComponent implements OnInit {
   results: Result[] = [];
+  originalResults: Result[] = [];
   selectedTransactionId: number | null = null;
   selectedTransaction: Result | null = null;
   transactionOptions: any;
@@ -44,6 +45,7 @@ export class DetailedAnalysisComponent implements OnInit {
     if (storedData) {
       const resultData = JSON.parse(storedData);
       this.results = resultData.results ?? [];
+      this.originalResults = [...this.results]; // копия оригинальных данных
 
       this.transactionOptions = this.results.map(tx => ({
         label: `Транзакция #${tx.transaction_id}`,
@@ -97,12 +99,51 @@ export class DetailedAnalysisComponent implements OnInit {
     return payerInfo.split(' ')[2] || '';
   }
 
-  submitFilter() {
-    console.log('results', this.results);
+  resetFilter() {
+    this.selectedRisks = ['high', 'medium'];
+    this.riskRange = [1, 5];
+    this.amountRange = [10000, 50000000];
+    this.selectedRules = [];
 
-    console.log('selectedRisks', this.selectedRisks);
-    console.log('riskRange', this.riskRange);
-    console.log('amountRange', this.amountRange);
-    console.log('selectedRules', this.selectedRules);
+    this.results = [...this.originalResults]; // восстановление данных
   }
+
+
+  submitFilter() {
+    const [minRisk, maxRisk] = this.riskRange;
+    const [minAmount, maxAmount] = this.amountRange;
+
+    // Преобразуем внутренние значения в русские
+    const riskLevelMap: Record<string, string> = {
+      high: 'Высокий',
+      medium: 'Средний'
+    };
+
+    const mappedSelectedRisks = this.selectedRisks.map(risk => riskLevelMap[risk]);
+
+    const filteredResults = this.results.filter(result => {
+      // 1. Уровень риска
+      const riskMatch = mappedSelectedRisks.length === 0 || mappedSelectedRisks.includes(result.risk_level);
+
+      // 2. Оценка риска
+      const score = result.risk_score || 0;
+      const scoreMatch = score >= minRisk && score <= maxRisk;
+
+      // 3. Сумма (нужно привести к числу)
+      const amount = parseFloat(result.analysis_details.amount.replace(/\s/g, '').replace(',', '.'));
+      const amountMatch = amount >= minAmount && amount <= maxAmount;
+
+      // 4. triggered_rules/ rule_descriptions
+      const ruleMatch =
+        this.selectedRules.length === 0 ||
+        result.rule_descriptions?.some(rule => this.selectedRules.includes(rule));
+
+      return riskMatch && scoreMatch && amountMatch && ruleMatch;
+    });
+
+    console.log('Отфильтрованные результаты:', filteredResults);
+    // this.filteredResults = filteredResults;
+    this.results = filteredResults;
+  }
+
 }
