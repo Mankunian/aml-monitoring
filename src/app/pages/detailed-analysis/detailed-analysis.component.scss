@@ -1,0 +1,16 @@
+.main-content {
+  .transaction-details {
+    /* В component.css или global styles */
+    .two-column-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .column {
+      flex: 1 1 0;
+      min-width: 300px;
+    }
+
+  }
+}

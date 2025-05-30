@@ -1,1 +1,142 @@
-<p>detailed-analysis works!</p>
+<div class="main-content">
+  <div class="title">
+    <h1>🔍 Детальный анализ</h1>
+  </div>
+
+
+  <div class="results-table">
+    <h2>Найдено {{ results?.length }} транзакций</h2>
+
+    <p-table
+      [value]="results"
+      [paginator]="true"
+      [rows]="20"
+      [rowsPerPageOptions]="[20, 50, 100]"
+      responsiveLayout="scroll">
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th>ID</th>
+          <th>Дата</th>
+          <th>Сумма (USD)</th>
+          <th>Отправитель</th>
+          <th>Получатель</th>
+          <th>Уровень риска</th>
+          <th>Оценка риска</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-tx>
+        <tr>
+          <td>{{ tx.transaction_id }}</td>
+          <td>{{ tx.analysis_details.transaction_date | date:'short' }}</td>
+          <td>{{ tx.analysis_details.amount }}</td>
+          <td>{{ tx.analysis_details.payer_info }}</td>
+          <td>{{ tx.analysis_details.receiver_info }}</td>
+          <td>{{ tx.risk_level }}</td>
+          <td>{{ tx.risk_score }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+
+    <p-button size="small" label="Скачать результаты в CSV" [outlined]="true" severity="contrast"/>
+
+  </div>
+
+
+  <div class="transaction-details">
+    <h2>Детали транзакции</h2>
+    <p>Выберите ID транзакции для просмотра деталей</p>
+    <p-dropdown
+      [style]="{ width: '100%' }"
+      [options]="transactionOptions"
+      [(ngModel)]="selectedTransactionId"
+      optionLabel="label"
+      optionValue="value"
+      (onChange)="onTransactionSelect($event.value)"
+      placeholder="Выберите транзакцию">
+    </p-dropdown>
+
+
+    <div class="two-column-container">
+      <div class="column left" *ngIf="selectedTransaction">
+        <!-- Левая колонка -->
+
+        <div class="main-info-container" >
+          <h2>Основная информация</h2>
+          <p>ID: <span>{{ selectedTransaction?.transaction_id }}</span></p>
+          <p>Дата: <span>{{ selectedTransaction?.analysis_details?.transaction_date }}</span></p>
+          <p>Сумма:
+            <span>{{ selectedTransaction?.analysis_details?.amount }} {{ selectedTransaction?.analysis_details?.currency }}</span>
+          </p>
+          <p>Тип операции: ?</p>
+        </div>
+
+
+        <div class="payment-purpose-container" >
+          <h2>Назначение платежа</h2>
+          <textarea
+            style="width: 100%; height: 100px;"
+            readonly
+            rows="5"
+            cols="30"
+            pInputTextarea
+            [value]="selectedTransaction?.analysis_details?.description"></textarea>
+        </div>
+
+        <div class="payer-info">
+          <h2>Плательщик</h2>
+
+          <p>Имя: {{getPayerInfoName(selectedTransaction?.analysis_details?.payer_info ?? '')}}</p>
+          <p>ИИН/БИН: {{getPayerInfoIDN(selectedTransaction?.analysis_details?.payer_info ?? '')}}</p>
+          <p>Страна: ?</p>
+        </div>
+
+        <div class="receiver_info">
+          <h2>Получатель</h2>
+
+          <p>Имя: {{getPayerInfoName(selectedTransaction?.analysis_details?.receiver_info ?? '')}}</p>
+          <p>ИИН/БИН: {{getPayerInfoIDN(selectedTransaction?.analysis_details?.receiver_info ?? '')}}</p>
+          <p>Страна: ?</p>
+        </div>
+      </div>
+      <div class="column right" *ngIf="selectedTransaction">
+        <!-- Правая колонка -->
+        <div class="check-result-container" >
+          <h2>Результаты проверки</h2>
+          <p>Оценка риска: {{ selectedTransaction?.risk_score }}/10</p>
+
+          <p>Уровень риска: {{ selectedTransaction?.risk_level }}</p>
+        </div>
+        <div class="rule_description">
+          <h2>Сработавшие правила</h2>
+
+          <ul style="line-height: 1.6; padding-left: 1.2rem; margin: 0;">
+            <li *ngFor="let desc of selectedTransaction?.rule_descriptions; let i = index;">
+              {{ desc }}
+            </li>
+          </ul>
+        </div>
+        <div class="recommendations-container" *ngIf="selectedTransaction">
+          <h2>Рекомендации</h2>
+          <p-messages
+            [(value)]="recommendationMessages"
+            [enableService]="false"
+            [closable]="false"/>
+        </div>
+        <div class="triggered_rules">
+          <h2>Дополнительная информация</h2>
+          <p-panel header="Все поля транзакции" [toggleable]="true">
+            <ul style="line-height: 1.6; padding-left: 1.2rem; margin: 0;">
+              <li *ngFor="let rule of selectedTransaction?.triggered_rules">
+                {{ rule }}
+              </li>
+            </ul>
+          </p-panel>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

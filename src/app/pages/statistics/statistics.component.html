@@ -21,4 +21,82 @@
   </div>
 
 
+  <div class="risk_distribution_chart">
+    <h4>Распределение транзакций по оценке риска</h4>
+    <p-chart
+      type="bar"
+      [data]="chartData"
+      [options]="chartOptions"
+      style="width: 100%; height: 1200px"
+    />
+  </div>
+
+
+  <div class="rule-percentage-chart">
+    <h2>Частота срабатывания правил</h2>
+    <h4>Процент срабатывания каждого правила</h4>
+
+    <p-chart
+      type="bar"
+      [data]="chartDataTopTriggeredRules"
+      [options]="chartOptionsTopTriggeredRules"
+    ></p-chart>
+  </div>
+
+
+  <div class="top-10-transactions-by-amount">
+    <h2>ТОП-10 транзакций по сумме</h2>
+
+    <p-table [value]="top10transactionByAmount" [rows]="10" responsiveLayout="scroll">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>ID</th>
+          <th>Дата</th>
+          <th>Сумма (USD)</th>
+          <th>Плательщик</th>
+          <th>Получатель</th>
+          <th>Уровень риска</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-tx>
+        <tr>
+          <td>{{ tx.transaction_id }}</td>
+          <td>{{ tx.analysis_details.transaction_date | date:'short' }}</td>
+          <td>{{ tx.analysis_details.amount }}</td>
+          <td>{{ tx.analysis_details.payer_info }}</td>
+          <td>{{ tx.analysis_details.receiver_info }}</td>
+          <td>{{ tx.risk_level }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+
+  <div class="top-10-high-risk-transaction">
+    <h2>ТОП-10 транзакций по оценке риска</h2>
+    <p-table [value]="top10HighRisk" [rows]="10" responsiveLayout="scroll">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>ID</th>
+          <th>Дата</th>
+          <th>Сумма (USD)</th>
+          <th>Плательщик</th>
+          <th>Получатель</th>
+          <th>Уровень риска</th>
+          <th>Оценка риска</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-tx>
+        <tr>
+          <td>{{ tx.transaction_id }}</td>
+          <td>{{ tx.analysis_details.transaction_date | date:'short' }}</td>
+          <td>{{ tx.analysis_details.amount }}</td>
+          <td>{{ tx.analysis_details.payer_info }}</td>
+          <td>{{ tx.analysis_details.receiver_info }}</td>
+          <td>{{ tx.risk_level }}</td>
+          <td>{{ tx.risk_score }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+
+  </div>
 </div>

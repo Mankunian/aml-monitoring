@@ -49,6 +49,8 @@ export class LoadDataComponent {
         // обработка результата
         console.log('Файл обработан:', result);
         this.fileResult = result.data;
+        localStorage.setItem('fileResult', JSON.stringify(result.data));
+
         this.messageInfo = [{ severity: 'info', detail: `Загружено ${result.data.total_results} сообщений для анализа...` }];
         this.messageSuccess = [{ severity: 'success', detail: `Анализ завершен! Найдено ${result.data.results?.length} транзакций с рисками.` }];
       })

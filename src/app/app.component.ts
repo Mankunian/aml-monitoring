@@ -27,6 +27,5 @@ export class AppComponent {
 
   onRadioChange(route: string) {
     this.router.navigate([route]);
-
   }
 }
