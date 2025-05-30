@@ -3,6 +3,78 @@
     <h1>🔍 Детальный анализ</h1>
   </div>
 
+  <div class="table-filter">
+    <p-card header="Фильтр">
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+
+        <!-- Колонка 1 -->
+        <div style="flex: 1; line-height: 2; width: 100%; display: grid">
+          <label>Уровень риска</label>
+          <p-multiSelect
+            [options]="riskOptions"
+            [(ngModel)]="selectedRisks"
+            optionLabel="label"
+            optionValue="value"
+            display="chip"
+            [style]="{width: '100%'}"
+            placeholder="Выберите уровень риска">
+          </p-multiSelect>
+        </div>
+
+        <!-- Колонка 2 -->
+        <div style="flex: 1;">
+          <label class="p-d-block mb-2" style="line-height: 1.8;">
+            Оценка риска: от {{ riskRange[0] }} до {{ riskRange[1] }}
+          </label>
+          <p-slider
+            [(ngModel)]="riskRange"
+            [min]="1"
+            [max]="5"
+            [step]="1"
+            [range]="true"
+            [style]="{width: '100%', height: '10px'}">
+          </p-slider>
+        </div>
+
+      </div>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+        <!-- Колонка 3 (например, dropdown по стране) -->
+        <div style="flex: 1; line-height: 2; ">
+          <label class="p-d-block mb-2">
+            Диапазон сумм : от {{ amountRange[0] }} до {{ amountRange[1] }}
+          </label>
+          <p-slider
+            [(ngModel)]="amountRange"
+            [min]="10000"
+            [max]="50000000"
+            [step]="1"
+            [range]="true"
+            [style]="{width: '100%', height: '10px'}"
+          >
+          </p-slider>
+        </div>
+
+        <!-- Колонка 3 (например, dropdown по стране) -->
+        <div style="flex: 1;  line-height: 2; width: 100%; display: grid">
+          <label>Сработавшие правила</label>
+          <p-multiSelect
+            [maxSelectedLabels]="2"
+            [options]="ruleDescriptionOptions"
+            [(ngModel)]="selectedRules"
+            optionLabel="label"
+            display="chip"
+            [style]="{width: '100%'}"
+            placeholder="Выберите правило">
+          </p-multiSelect>
+
+        </div>
+      </div>
+
+      <div class="actions">
+        <p-button (click)="submitFilter()" label="Submit" />
+      </div>
+    </p-card>
+  </div>
 
   <div class="results-table">
     <h2>Найдено {{ results?.length }} транзакций</h2>
@@ -43,7 +115,6 @@
 
   </div>
 
-
   <div class="transaction-details">
     <h2>Детали транзакции</h2>
     <p>Выберите ID транзакции для просмотра деталей</p>
@@ -62,7 +133,7 @@
       <div class="column left" *ngIf="selectedTransaction">
         <!-- Левая колонка -->
 
-        <div class="main-info-container" >
+        <div class="main-info-container">
           <h2>Основная информация</h2>
           <p>ID: <span>{{ selectedTransaction?.transaction_id }}</span></p>
           <p>Дата: <span>{{ selectedTransaction?.analysis_details?.transaction_date }}</span></p>
@@ -73,7 +144,7 @@
         </div>
 
 
-        <div class="payment-purpose-container" >
+        <div class="payment-purpose-container">
           <h2>Назначение платежа</h2>
           <textarea
             style="width: 100%; height: 100px;"
@@ -87,22 +158,22 @@
         <div class="payer-info">
           <h2>Плательщик</h2>
 
-          <p>Имя: {{getPayerInfoName(selectedTransaction?.analysis_details?.payer_info ?? '')}}</p>
-          <p>ИИН/БИН: {{getPayerInfoIDN(selectedTransaction?.analysis_details?.payer_info ?? '')}}</p>
+          <p>Имя: {{ getPayerInfoName(selectedTransaction?.analysis_details?.payer_info ?? '') }}</p>
+          <p>ИИН/БИН: {{ getPayerInfoIDN(selectedTransaction?.analysis_details?.payer_info ?? '') }}</p>
           <p>Страна: ?</p>
         </div>
 
         <div class="receiver_info">
           <h2>Получатель</h2>
 
-          <p>Имя: {{getPayerInfoName(selectedTransaction?.analysis_details?.receiver_info ?? '')}}</p>
-          <p>ИИН/БИН: {{getPayerInfoIDN(selectedTransaction?.analysis_details?.receiver_info ?? '')}}</p>
+          <p>Имя: {{ getPayerInfoName(selectedTransaction?.analysis_details?.receiver_info ?? '') }}</p>
+          <p>ИИН/БИН: {{ getPayerInfoIDN(selectedTransaction?.analysis_details?.receiver_info ?? '') }}</p>
           <p>Страна: ?</p>
         </div>
       </div>
       <div class="column right" *ngIf="selectedTransaction">
         <!-- Правая колонка -->
-        <div class="check-result-container" >
+        <div class="check-result-container">
           <h2>Результаты проверки</h2>
           <p>Оценка риска: {{ selectedTransaction?.risk_score }}/10</p>
 
