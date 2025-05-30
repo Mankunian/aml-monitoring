@@ -1,14 +1,9 @@
 <div class="main-content">
-
-
   <div class="title">
     <h1>📁 Загрузка данных</h1>
     <span>Загрузите файл с транзакциями в формате JSON для анализа. Система проверит каждую транзакцию на соответствие правилам AML и выделит подозрительные операции.
   </span>
   </div>
-
-
-
   <div class="file-upload-container">
     <h4>Выберите файл JSON</h4>
     <p-fileUpload
@@ -30,8 +25,6 @@
       </ng-template>
     </p-fileUpload>
   </div>
-
-
   <div class="slider-wrapper">
     <label for="rating" class="slider-label">Оценка:</label>
     <p-slider
@@ -43,8 +36,6 @@
     ></p-slider>
     <div class="slider-value">Текущее значение: {{ sliderValue }}</div>
   </div>
-
-
   <div *ngIf="fileResult" class="alert-container">
     <p-messages [(value)]="messageInfo" [closable]="false" />
 
@@ -55,7 +46,4 @@
     <a (click)="goStats()" class="stat_link">Перейти к статистике</a>
 
   </div>
-
-
-
 </div>

@@ -51,9 +51,9 @@ export interface TopTriggeredRule {
 export interface Statistics {
   total_transactions: number
   processed_transactions: number
-  high_risk_count: number
-  medium_risk_count: number
-  low_risk_count: number
+  high_risk_count: number | undefined
+  medium_risk_count: number | undefined
+  low_risk_count: number | undefined
   error_count: number
   rule_statistics: RuleStatistics
   processing_time: string

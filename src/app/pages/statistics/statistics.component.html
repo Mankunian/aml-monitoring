@@ -1,1 +1,24 @@
-<p>statistics works!</p>
+<div class="main-content">
+  <div class="title">
+    <h1>📊 Статистика</h1>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-box">
+      <div class="stat-title">Транзакций с высоким риском</div>
+      <div class="stat-value">{{ resultData?.statistics?.high_risk_count }} ({{getPercentage(resultData?.statistics?.high_risk_count ?? 0)}})</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-title">Транзакций со средним риском</div>
+      <div class="stat-value">{{ resultData?.statistics?.medium_risk_count }} ({{ getPercentage(resultData?.statistics?.medium_risk_count ?? 0) }})</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-title">Транзакций с низким риском</div>
+      <div class="stat-value">{{ resultData?.statistics?.low_risk_count }} ({{ getPercentage(resultData?.statistics?.low_risk_count ?? 0) }})</div>
+    </div>
+  </div>
+
+
+</div>

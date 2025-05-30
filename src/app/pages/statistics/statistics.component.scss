@@ -1,0 +1,32 @@
+.main-content {
+
+
+  .stats-row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap; /* на всякий случай, для адаптива */
+  }
+
+  .stat-box {
+    flex: 1 1 30%;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-title {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #222;
+  }
+
+}
