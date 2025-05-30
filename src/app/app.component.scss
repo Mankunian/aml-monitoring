@@ -69,7 +69,7 @@
   position: fixed;
   top: 1rem;
   left: 0;  /* При закрытом sidebar — кнопка у левого края */
-  width: 60px;
+  width: auto;
   height: 40px;
   cursor: pointer;
   z-index: 1000;
