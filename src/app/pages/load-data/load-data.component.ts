@@ -24,39 +24,61 @@ import {Router} from "@angular/router";
 })
 export class LoadDataComponent {
   maxFileSize = 200 * 1024 * 1024; // 200 MB
-  sliderValue = 0;
+  sliderValue = 1;
   apiUrl = environment.apiUrl;
   messageInfo: Message[] = [];
   messageSuccess: Message[] = [];
   fileResult: FileResultData | null = null;
+  isUploading = false; // добавить в компонент
+  selectedFile: File | null = null;
 
   constructor(private router: Router) {
   }
 
   onUpload(event: any) {
     const file: File = event.files[0];
+    this.selectedFile = file;
 
     if (!file) return;
 
-    // Вы можете загрузить файл сюда (например, через сервис)
-    console.log('Загружаемый файл:', file);
-    console.log(environment.apiUrl);
+    localStorage.removeItem('fileResult'); // очищаем старые данные
 
-    // Очистка компонента после загрузки (опционально)
-    // (event.originalEvent.target as FileUpload)?.clear();
+
+    this.isUploading = true; // запуск спиннера
+    console.log('Загружаемый файл:', file);
+
+
     this.processFile(file)
       .then((result: FileResult) => {
-        // обработка результата
         console.log('Файл обработан:', result);
         this.fileResult = result.data;
+
         localStorage.setItem('fileResult', JSON.stringify(result.data));
 
-        this.messageInfo = [{ severity: 'info', detail: `Загружено ${result.data.total_results} сообщений для анализа...` }];
-        this.messageSuccess = [{ severity: 'success', detail: `Анализ завершен! Найдено ${result.data.results?.length} транзакций с рисками.` }];
+        this.messageInfo = [{
+          severity: 'info',
+          detail: `Загружено ${result.data.total_results} сообщений для анализа...`
+        }];
+
+        this.messageSuccess = [{
+          severity: 'success',
+          detail: `Анализ завершен! Найдено ${result.data.results?.length} транзакций с рисками.`
+        }];
       })
       .catch(error => {
-        // обработка ошибок
         console.error('Ошибка обработки файла:', error);
+        this.messageInfo = [{
+          severity: 'error',
+          detail: 'Ошибка при загрузке или анализе файла.'
+        }];
+      })
+      .finally(() => {
+        this.isUploading = false; // выключаем спиннер
+
+        // очищаем p-fileUpload (если нужно)
+        if (event?.originalEvent?.target?.clear) {
+          event.originalEvent.target.clear();
+        }
       });
   }
 

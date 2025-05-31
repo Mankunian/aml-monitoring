@@ -1,4 +1,4 @@
-<div class="main-content">
+<div *ngIf="!noData()" class="main-content">
   <div class="title">
     <h1>🔍 Детальный анализ</h1>
   </div>
@@ -80,7 +80,7 @@
   </div>
 
   <div class="results-table">
-    <h2>Найдено {{ results?.length }} транзакций</h2>
+    <h2>Найдено {{ results.length }} транзакций</h2>
 
     <p-table
       [value]="results"
@@ -213,4 +213,9 @@
     </div>
 
   </div>
+</div>
+
+
+<div *ngIf="noData()" class="no-data-container">
+  <p>Нет загруженных данных. Пожалуйста, загрузите файл для анализа.</p>
 </div>

@@ -146,4 +146,9 @@ export class DetailedAnalysisComponent implements OnInit {
     this.results = filteredResults;
   }
 
+  noData(): boolean {
+    const data = localStorage.getItem('fileResult');
+    return !data || data === 'null' || data === 'undefined';
+  }
+
 }

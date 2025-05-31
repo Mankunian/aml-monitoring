@@ -18,12 +18,25 @@
       [maxFileSize]="maxFileSize"
       [auto]="false"
       [style]="{ width: '100%' }"
+      [disabled]="isUploading"
     >
       <ng-template pTemplate="content">
         <p>Перетащите файл сюда или нажмите "Выбрать".</p>
         <p class="text-sm text-gray-500">Максимум 200 МБ</p>
       </ng-template>
+
+      <ng-template pTemplate="footer">
+        <p-button
+          *ngIf="isUploading"
+          label="Загрузка..."
+          icon="pi pi-spinner"
+          [loading]="isUploading"
+          [disabled]="!selectedFile"
+          class="w-full"
+        />
+      </ng-template>
     </p-fileUpload>
+
   </div>
   <div class="slider-wrapper">
     <label for="rating" class="slider-label">Оценка:</label>

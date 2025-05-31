@@ -173,4 +173,8 @@ export class StatisticsComponent implements OnInit {
     return percentage.toFixed(1) + '%';
   }
 
+  noData(): boolean {
+    const data = localStorage.getItem('fileResult');
+    return !data || data === 'null' || data === 'undefined';
+  }
 }
