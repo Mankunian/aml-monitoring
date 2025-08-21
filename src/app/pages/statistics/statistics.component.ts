@@ -31,7 +31,6 @@ export class StatisticsComponent implements OnInit {
     const state = this.location.getState() as { data?: FileResultData };
 
     if (state?.data) {
-      console.log('Полученные данные из state:', state.data);
       this.resultData = state.data;
       this.results = state.data.results;
       this.top_triggered_rules = state.data.summary.top_triggered_rules;
